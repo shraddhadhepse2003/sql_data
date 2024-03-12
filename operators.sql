@@ -29,6 +29,25 @@ select * from student_data where id in (2,5,7);
 
 update student_data set paid_fees =paid_fees+((paid_fees*1.5)*100) where id in(3,7);
 
+select * from student_data where id not in(2,5);
+select * from student_data where id between 3 and 8;
+select * from student_data where paid_fees between 20000 and 25000;
+select * from student_data where paid_fees=20000 and paid_fees<=25000;
+
+-- set operator
+create table table1(id int,name varchar(20));
+create table table2(id int,name varchar(20));
+insert into table1 values (1,'shraddha'),(2,'surbhi'),(3,'anushka'),(4,'shalvi'),(5,'mandira');
+insert into table2 values(1,'anushka'),(2,'surbhi'),(3,'hrishita'),(4,'purva'),(5,'mandira');
+select * from table1;
+select * from table2;
+
+select * from table1 union select * from table2;
+select * from table1 union all select * from table2;
+select * from table1 intersect select * from table2;
+select * from table1 except select * from table2;
+
+select id from table1 union select id from table2;
 
 
 
