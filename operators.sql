@@ -32,7 +32,7 @@ update student_data set paid_fees =paid_fees+((paid_fees*1.5)*100) where id in(3
 select * from student_data where id not in(2,5);
 select * from student_data where id between 3 and 8;
 select * from student_data where paid_fees between 20000 and 25000;
-select * from student_data where paid_fees=20000 and paid_fees<=25000;
+select * from student_data where paid_fees>=20000 and paid_fees<=25000;
 
 -- set operator
 create table table1(id int,name varchar(20));
